@@ -35,4 +35,11 @@ public class PatternMatching {
         }
         System.out.print(data.intValue());
     }
+
+    void getFish(Object fish) {
+        if (!(fish instanceof String guppy))
+            System.out.print("Eat!");
+//        else if (!(fish instanceof String guppy)) {  you cant use same variable above
+//            throw new RuntimeException(); }
+        System.out.print("Swim!"); }
 }
