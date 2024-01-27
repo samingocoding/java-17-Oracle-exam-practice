@@ -1,6 +1,7 @@
 package stringmanipulation;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 
 public class StringManipulation {
     public static void main(String[] args) {
@@ -81,6 +82,16 @@ public class StringManipulation {
         var birds = new String[6];
         System.out.println(birds.length);
 
+        String trying = "er";
+        trying +=false;
+        System.out.println(trying);
+
+        if (trying == "erfalse".intern()) System.out.println("took from string pool");
+        if (trying == "erfalse") System.out.println("string not from string pool");
+
+        String[] s3 = { "Camel"};
+        String[] s4 = { "Samel"};
+        System.out.println(Arrays.mismatch(s3,s4));
 
 
     }
