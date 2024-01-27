@@ -24,3 +24,20 @@ public class MethodStructure {
     }
 
 }
+class People{
+    /**
+     * Instance Variable Modifores
+     * The Final optional specifier shows that the variable need to be initialised
+     * Even when you comment it wont compile */
+    final int age = 10;
+    final int fishEaten;
+    final String name;
+
+    {
+        fishEaten = 10;
+    }
+
+    public People() {
+        name = "Robert";
+    }
+}
