@@ -50,4 +50,5 @@ public class TestStatic {
         System.out.println(staticVariable);
         System.out.println(instanceVariable);
     }
+
 }
