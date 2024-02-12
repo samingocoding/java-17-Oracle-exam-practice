@@ -3,7 +3,7 @@ package methoddesign.staticlearn;
 public class StaticModifiers {
     private static final int NUMBER_STATIC;
     private static final int NUMBER_STATIC2;
-    private static final int NUMBER_STATIC3 =9;
+    private static int NUMBER_STATIC3 =9;
     private int myNumber;
 
     /**
@@ -14,6 +14,7 @@ public class StaticModifiers {
         System.out.println("I dont run again when an instance is initialized ");
         NUMBER_STATIC=4;
         NUMBER_STATIC2=9;
+        NUMBER_STATIC3=6;
         /**
          * You can only initialise a constant variable once
          * */
@@ -30,12 +31,15 @@ public class StaticModifiers {
     {
         /**
          * Initilizing a static variable in an instance initializer bock
-         * does not work the main varible won't be initialized
+         * works but should not be final\
+         *
          * */
+        NUMBER_STATIC3= 5;
 //        NUMBER_STATIC2=4;  // Does not Compiles but do
         System.out.println("I am the one who starts second Instance initialser block");
         System.out.println("I run only when an instance is initialized ");
         myNumber= 4;
+
     }
     public static void main(String[] args) {
         /**
@@ -46,5 +50,16 @@ public class StaticModifiers {
         StaticModifiers staticModifiers = new StaticModifiers();
         StaticModifiers staticModifiers2 = new StaticModifiers();
         System.out.println(staticModifiers2.myNumber);
+
+        /**
+         * You can access static methods also from the object of the class
+         * */
+        new StaticModifiers().swing();
+        swing();
+        StaticModifiers.swing();
+
+    }
+    public static void swing() {
+        System.out.println("Static methods");
     }
 }

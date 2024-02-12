@@ -7,6 +7,9 @@ import java.util.List;
 //import static java.util.Arrays; // DOES NOT COMPILE
 import static java.util.Arrays.asList;
 //static import java.util.Arrays.*; // DOES NOT COMPILE
+/**
+ * You can import all static methods and members using wild cards also
+ * */
 
 //import static java.util.Arrays.asList;
 
