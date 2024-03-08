@@ -42,4 +42,13 @@ public class PatternMatching {
 //        else if (!(fish instanceof String guppy)) {  you cant use same variable above
 //            throw new RuntimeException(); }
         System.out.print("Swim!"); }
+
+    void tryReturn(Number number){
+        if(!(number instanceof Integer data)){
+
+            return;
+        }
+        int a =7;
+        System.out.println(data);
+    }
 }
