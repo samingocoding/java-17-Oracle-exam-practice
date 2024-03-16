@@ -17,6 +17,10 @@ class Rules {
         return "rhino"; }
     protected String getColor() { return "grey, black, or white";
     }
+
+    private String getSurname(){
+      return "Surname";
+    }
 }
 public class Kangaroo extends Rules {
 
@@ -72,7 +76,7 @@ public class Kangaroo extends Rules {
      * The overriding method must use a return type that is covariant with
      * the return type of the inherited method.
      * **/
-
+    @Override  // You can use or not use compiler auto pick that its overiden
     public String getName() {
         return "javan rhino"; }
 //    public CharSequence getColor() {  return "grey"; }
@@ -83,10 +87,20 @@ public class Kangaroo extends Rules {
 //    }
 
 
+    //Overriding private members
+    /**
+     * NB You cant overide private methods
+     * **/
+//    @Override
+//    private String getSurname(){
+//        return "Sam";
+//    }
+
 
     public static void main(String[] args) {
         System.out.println(new Rules().getAverageWeight()); // 50.0
         System.out.println(new Kangaroo().getAverageWeight()); // 70.0
+
     }
 
 
