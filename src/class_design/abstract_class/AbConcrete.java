@@ -6,14 +6,24 @@ public abstract class AbConcrete {
 
     abstract void eatLeaf();
     abstract void getName();
+
+    public AbConcrete() {
+        System.out.println("Initialised Abstract Parent Class");
+    }
 }
 
 abstract class Rhino extends AbConcrete {
+
     /**
      * Abstract classes can implement parent abstract class
      *and does nnot force child to implement the same*/
     void showHorn() {
     } // Inherited from Mammal
+
+    public Rhino() {
+        //Compiler puts super()
+        System.out.println("Initialsed Child Abstract Class");
+    }
 }
 
 /**
@@ -38,6 +48,13 @@ class BlackRhino extends Rhino {
     @Override
     void getName() {
 
+    }
+
+    public static void main(String[] args) {
+        /**
+         * abstract classes are initialized with constructors in the same way as non-abstract classes
+         * */
+        new BlackRhino();
     }
 
 
