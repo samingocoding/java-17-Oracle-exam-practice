@@ -23,4 +23,10 @@ abstract public class AbstractOrder {
 
 //    public int abstract howl(); DOES not compile
 
+    /**
+     * Non Abstract methods requeire a body
+     * eg void sleep(); wont compile
+     * */
+    abstract void sleep();
+
 }
