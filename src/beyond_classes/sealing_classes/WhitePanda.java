@@ -1,4 +1,4 @@
-package class_design.sealing_classes;
+package beyond_classes.sealing_classes;
 
 /**
  *Subclasses of a sealed class
