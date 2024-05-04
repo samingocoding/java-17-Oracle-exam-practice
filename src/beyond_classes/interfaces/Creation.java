@@ -1,4 +1,4 @@
-package class_design.interfaces;
+package beyond_classes.interfaces;
 
 public interface Creation {
     //public interface class Creation does not compile interface is not a class

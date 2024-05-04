@@ -1,4 +1,4 @@
-package class_design.enums;
+package beyond_classes.enums;
 
 public enum SpecialEnum implements Methods{
     //Enum can implement an interface
@@ -26,7 +26,7 @@ public enum SpecialEnum implements Methods{
 //    }
     ;
     public abstract String getHours();
-
+//abstract method makes all enums to implemenrt the method
 
     //You can define a global method
     public String getEnumMotive(){
@@ -40,6 +40,12 @@ public enum SpecialEnum implements Methods{
     public int getTemperature() {
         return 5;
     }
+
+    /***
+     * Constructor implicitly private
+     * */
+//   public SpecialEnum() {  does not compile
+//    }
 }
 
 interface Methods{

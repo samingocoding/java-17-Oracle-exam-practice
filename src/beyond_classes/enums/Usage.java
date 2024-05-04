@@ -1,4 +1,6 @@
-package class_design.enums;
+package beyond_classes.enums;
+
+import beyond_classes.sealing_classes.Bear;
 
 public class Usage {
     public static void main(String[] args) {
@@ -21,11 +23,11 @@ public class Usage {
 
         /**
          * Calling the valueOf () Method
-         *valueOf ()=> CALLs the value of season type with name equal to passed name
+         *valueOf (X)=> CALLs the value of season type with name equal to passed name
          * */
         Seasons s = Seasons.valueOf("SUMMER"); // SUMMER returns the enum with matching name
         //Seasons t = Seasons.valueOf("summer"); // IllegalArgumentException as enum is caps
-        //No enum constant class_design.enums.Seasons.summer
+        //No enum constant beyond_classes.interfaces.enums.Seasons.summer
         System.out.println(s);
         //System.out.println(t);
 
@@ -43,7 +45,8 @@ public class Usage {
             case SUMMER: // only call with enum value only
                 System.out.print("Time for the pool!");
                 break;
-//            case Seasons.SUMMER:
+        //   case Seasons.SUMMER:  dont use enum name but value SUMMER
+               //          case Seasons.valueOf("SUMMER"): cant resolve value of
 //                System.out.println("This wont work as compiler looks for name of enum not class type");
 //            case Seasons.valueOf("SUMMER"):  wont resolve for valueOf()
 //            case 0:
