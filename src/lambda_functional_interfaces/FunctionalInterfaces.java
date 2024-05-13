@@ -52,6 +52,7 @@ interface Climb {
 
     //IS FI as it has one abstract method reach();
     default void fall() {
+
     }
 
     static int getBackUp() {

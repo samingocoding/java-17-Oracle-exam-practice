@@ -2,6 +2,7 @@ package lambda_functional_interfaces;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class LambdaSyntax {
     /***
@@ -19,6 +20,7 @@ public class LambdaSyntax {
 //        Since that interface’s method takes an Animal, the lambda parameter has to be an Animal.
 
         List<Animal> animals = new ArrayList<>();
+
 
 
 /**
@@ -47,4 +49,17 @@ public class LambdaSyntax {
     private static void print(List<Animal> animals, CheckTrait checker) {
 
     }
+
+    public void remove(List<Character> chars) {
+        char end = 'z';
+//        char c = 'x'; // you can insert it after not before
+//        char start = 'a';
+        Predicate<Character> predicate = c -> {
+            char start = 'a';
+            return start <= c && c <= end;
+        };
+        char c = 'x';
+        char start = 'a';
+    }
+
 }
